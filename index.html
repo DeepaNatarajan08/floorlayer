@@ -1,1 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Floorlayer – Vinyl, Laminate, Engineered Hardwood &amp; Stairs</title>
+<style>
+:root{--bg:#faf7f2;--surface:#fff;--ink:#241c15;--muted:#6b5f53;--line:#e6ddd0;--accent:#9a5b2e;--accent-ink:#fff;--dark:#2b2118;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17120d;--surface:#211a13;--ink:#f3ece3;--muted:#b3a698;--line:#382d22;--accent:#d08a52;--accent-ink:#17120d;--dark:#0f0b08}}
+:root[data-theme="dark"]{--bg:#17120d;--surface:#211a13;--ink:#f3ece3;--muted:#b3a698;--line:#382d22;--accent:#d08a52;--accent-ink:#17120d;--dark:#0f0b08}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,"Times New Roman",serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:10}
+h1,h2,h3,.nav,.btn,.chip,.eyebrow{font-family:"Helvetica Neue",Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{font:700 20px "Helvetica Neue",Arial,sans-serif;letter-spacing:.5px}
+.logo span{color:var(--accent)}
+.nav{display:flex;gap:22px;font-size:14px;overflow-x:auto}
+.nav a{white-space:nowrap;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-color:var(--accent)}
+.cart{border:1px solid var(--line);background:none;color:var(--ink);padding:8px 14px;border-radius:999px;font:600 13px "Helvetica Neue",Arial,sans-serif;cursor:pointer}
+.hero{background:var(--dark);color:#f3ece3;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:72px}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--accent);font-weight:700}
+.hero h1{font-size:clamp(34px,5vw,56px);line-height:1.08;margin:10px 0 16px}
+.hero p{color:#cfc3b4;max-width:46ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;font-size:14px;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);cursor:pointer}
+.btn.ghost{background:none;color:inherit;border-color:currentColor}
+.planks{aspect-ratio:4/3;border-radius:10px;background:
+repeating-linear-gradient(90deg,transparent 0 118px,rgba(0,0,0,.35) 118px 120px),
+repeating-linear-gradient(0deg,#b5784a 0 60px,#a56a3e 60px 120px,#c08556 120px 180px,#9a5f36 180px 240px)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.stats div{background:var(--surface);padding:18px;text-align:center;font:600 14px "Helvetica Neue",Arial,sans-serif}
+.stats small{display:block;color:var(--muted);font-weight:400}
+section{padding:64px 0}
+h2{font-size:clamp(26px,3.5vw,36px);margin:0 0 8px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 32px}
+.cats{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.img{height:200px}
+.vinyl{background:repeating-linear-gradient(90deg,transparent 0 98px,rgba(0,0,0,.25) 98px 100px),repeating-linear-gradient(0deg,#8c8a86 0 50px,#7a7874 50px 100px,#9a9894 100px 150px)}
+.lam{background:repeating-linear-gradient(90deg,transparent 0 138px,rgba(0,0,0,.25) 138px 140px),repeating-linear-gradient(0deg,#cdb08a 0 45px,#bfa07a 45px 90px,#d6bc99 90px 135px)}
+.eng{background:repeating-linear-gradient(90deg,transparent 0 158px,rgba(0,0,0,.3) 158px 160px),repeating-linear-gradient(0deg,#7a4b2a 0 70px,#6a3f22 70px 140px,#875630 140px 210px)}
+.stair{background:repeating-linear-gradient(180deg,#b98a5c 0 28px,#7c5430 28px 36px,#d3b189 36px 64px,#7c5430 64px 72px)}
+.card .body{padding:20px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{margin:0;font-size:20px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px 10px;color:var(--muted)}
+.card .btn{margin-top:auto;align-self:flex-start}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.stairs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.stairs .card .img{height:140px}
+.visual{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.room{aspect-ratio:4/3;border-radius:10px;background:linear-gradient(180deg,#d9d0c3 0 55%,transparent 55%),repeating-linear-gradient(90deg,transparent 0 78px,rgba(0,0,0,.25) 78px 80px),repeating-linear-gradient(0deg,#a9784f 0 40px,#9b6c46 40px 80px)}
+.locs{display:grid;grid-template-columns:minmax(0,420px);gap:18px}
+.loc{padding:20px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.loc h3{margin:0 0 6px;font-size:17px}.loc p{margin:0;color:var(--muted);font-size:14px}
+footer{background:var(--dark);color:#cfc3b4;padding:48px 0 32px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px}
+footer h4{color:#f3ece3;margin:0 0 10px;font-family:"Helvetica Neue",Arial,sans-serif}
+footer a{display:block;padding:3px 0}
+footer .copy{margin-top:32px;border-top:1px solid #4a3c2e;padding-top:16px}
+@media(max-width:820px){.hero .wrap,.visual{grid-template-columns:1fr}.cats,.stairs,.locs{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}footer .cols{grid-template-columns:1fr 1fr}.bar{height:auto;padding:10px 0;flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#top" aria-label="The Floorlayer"><svg viewBox="4 14 380 90" style="height:40px;width:auto;display:block" role="img" aria-hidden="true"><rect x="10" y="20" width="52" height="16" rx="2" fill="#9a5b2e"/><rect x="66" y="20" width="24" height="16" rx="2" fill="#c08556"/><rect x="10" y="41" width="24" height="16" rx="2" fill="#c08556"/><rect x="38" y="41" width="52" height="16" rx="2" fill="#7a4b2a"/><rect x="10" y="62" width="40" height="16" rx="2" fill="#7a4b2a"/><rect x="54" y="62" width="36" height="16" rx="2" fill="#9a5b2e"/><rect x="10" y="83" width="58" height="16" rx="2" fill="#c08556"/><rect x="72" y="83" width="18" height="16" rx="2" fill="#7a4b2a"/><text x="108" y="50" font-family="'Helvetica Neue',Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="7" style="fill:var(--accent)">THE</text><text x="106" y="88" font-family="'Helvetica Neue',Arial,sans-serif" font-size="40" font-weight="800" letter-spacing="1" style="fill:var(--ink)">FLOORLAYER</text></svg></a>
+<nav class="nav"><a href="#vinyl">Vinyl</a><a href="#laminate">Laminate</a><a href="#engineered">Engineered Hardwood</a><a href="#stairs">Stair Products</a><a href="#locations">Locations</a><a href="#contact">Contact</a></nav>
+<button class="cart" id="cart" type="button">Cart (0)</button>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<div class="eyebrow">Wholesale flooring supplier</div>
+<h1>Floors and stairs, built to last.</h1>
+<p>Waterproof vinyl, durable laminate, genuine engineered hardwood and matching stair products, all from one trusted source.</p>
+<div class="btns"><a class="btn" href="#categories">Shop collections</a><a class="btn ghost" href="#visualizer">Upload your room</a></div>
+</div>
+<div class="planks" role="img" aria-label="Wood plank flooring sample"></div>
+</div></div>
+
+<div class="stats">
+<div>Waterproof options<small>Vinyl &amp; laminate</small></div>
+<div>Free samples<small>At our locations</small></div>
+<div>Wholesale pricing<small>For contractors</small></div>
+<div>Matching stairs<small>Treads, risers &amp; nosing</small></div>
+</div>
+
+<section id="categories"><div class="wrap">
+<h2>Shop by category</h2>
+<p class="lead">Four focused collections, so you find the right floor faster.</p>
+<div class="cats">
+<article class="card" id="vinyl"><div class="img vinyl"></div><div class="body"><h3>Vinyl</h3><p>High-quality waterproof vinyl plank flooring, suited to both homes and commercial spaces.</p><div class="chips"><span class="chip">SPC core</span><span class="chip">Thickness</span><span class="chip">Colour</span><span class="chip">Series</span></div><a class="btn" href="#">Shop vinyl</a></div></article>
+<article class="card" id="laminate"><div class="img lam"></div><div class="body"><h3>Laminate</h3><p>Handcrafted, waterproof laminate collections in matt, glossy and handscraped finishes.</p><div class="chips"><span class="chip">12mm</span><span class="chip">Surface</span><span class="chip">Colour</span><span class="chip">Series</span></div><a class="btn" href="#">Shop laminate</a></div></article>
+<article class="card" id="engineered"><div class="img eng"></div><div class="body"><h3>Engineered Hardwood</h3><p>A genuine hardwood surface with timeless elegance, plus added stability and moisture resistance.</p><div class="chips"><span class="chip">Species</span><span class="chip">Width</span><span class="chip">Finish</span><span class="chip">Collections</span></div><a class="btn" href="#">Shop hardwood</a></div></article>
+<article class="card"><div class="img stair"></div><div class="body"><h3>Stair Products</h3><p>Stairboards, balusters and spindles to finish your project with a safe, cohesive look.</p><div class="chips"><span class="chip">Stairboard</span><span class="chip">Balusters</span><span class="chip">Spindles</span></div><a class="btn" href="#stairs">Shop stairs</a></div></article>
+</div>
+</div></section>
+
+<section class="alt" id="stairs"><div class="wrap">
+<h2>Stair products</h2>
+<p class="lead">Everything to match your new floor from the first step to the top landing.</p>
+<div class="stairs">
+<article class="card"><div class="img stair"></div><div class="body"><h3>Stairboard</h3><p>Treads and risers sized to match your flooring.</p><button class="btn add" type="button">Add to cart</button></div></article>
+<article class="card"><div class="img stair"></div><div class="body"><h3>Balusters</h3><p>Sturdy balusters in a range of profiles and finishes.</p><button class="btn add" type="button">Add to cart</button></div></article>
+<article class="card"><div class="img stair"></div><div class="body"><h3>Spindles</h3><p>Turned spindles for a classic railing.</p><button class="btn add" type="button">Add to cart</button></div></article>
+</div>
+</div></section>
+
+<section id="visualizer"><div class="wrap visual">
+<div class="room" role="img" aria-label="Room preview mockup"></div>
+<div>
+<h2>Upload your room</h2>
+<p class="lead">Use your phone to take a photo of your space and preview our floors in it, so you can choose with confidence.</p>
+<a class="btn" href="#">Upload your room</a>
+</div>
+</div></section>
+
+<section class="alt" id="locations"><div class="wrap">
+<h2>Our location</h2>
+<p class="lead">Visit us in Surrey and pick up free floor samples.</p>
+<div class="locs">
+<div class="loc"><h3>Surrey</h3><p>Surrey, BC<br>Open daily, 10AM–6PM<br><a href="tel:+17788230567">+1-778-823-0567</a></p></div>
+</div>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+<div class="cols">
+<div><h4>The Floorlayer</h4><p>Vinyl, laminate, engineered hardwood and stair products for contractors and homeowners.</p></div>
+<div><h4>Shop</h4><a href="#vinyl">Vinyl</a><a href="#laminate">Laminate</a><a href="#engineered">Engineered Hardwood</a><a href="#stairs">Stair Products</a></div>
+<div><h4>Company</h4><a href="#locations">Our Locations</a><a href="#">About Us</a><a href="#">FAQs</a></div>
+<div><h4>Contact</h4><a href="mailto:prakashtuto@gmail.com">prakashtuto@gmail.com</a><a href="tel:+17788230567">+1-778-823-0567</a></div>
+</div>
+<div class="copy">© 2026 The Floorlayer. All rights reserved.</div>
+</div></footer>
+
+<script>
+(function(){var n=0,c=document.getElementById('cart');
+document.querySelectorAll('.add').forEach(function(b){b.addEventListener('click',function(){n++;c.textContent='Cart ('+n+')';});});})();
+</script>
+</body>
+</html>
 
